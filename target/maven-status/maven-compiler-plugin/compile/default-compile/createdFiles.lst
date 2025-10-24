@@ -1,0 +1,6 @@
+com\tricol\suppliers\service\FournisseurService.class
+com\tricol\suppliers\web\FournisseurController.class
+com\tricol\suppliers\domain\Fournisseur.class
+com\tricol\suppliers\TricolSuppliersApplication.class
+com\tricol\suppliers\repository\FournisseurRepository.class
+com\tricol\suppliers\service\FournisseurServiceInterface.class
