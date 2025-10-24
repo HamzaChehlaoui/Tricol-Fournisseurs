@@ -1,0 +1,87 @@
+{
+  "info": {
+    "name": "Tricol Suppliers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "a5d0f4dc-6c5f-4d7c-a6c9-0a9a6f3b1b11"
+  },
+  "item": [
+    {
+      "name": "List fournisseurs",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8081/api/v1/fournisseurs?sort=societe",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["api", "v1", "fournisseurs"],
+          "query": [{"key": "sort", "value": "societe"}]
+        }
+      }
+    },
+    {
+      "name": "Get fournisseur by id",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8081/api/v1/fournisseurs/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["api", "v1", "fournisseurs", "1"]
+        }
+      }
+    },
+    {
+      "name": "Create fournisseur",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"societe\": \"ACME SARL\",\n  \"adresse\": \"Rue 123\",\n  \"contact\": \"Jean Dupont\",\n  \"email\": \"contact@acme.com\",\n  \"telephone\": \"0612345678\",\n  \"ville\": \"Casablanca\",\n  \"ice\": \"ICE123456\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/v1/fournisseurs",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["api", "v1", "fournisseurs"]
+        }
+      }
+    },
+    {
+      "name": "Update fournisseur",
+      "request": {
+        "method": "PUT",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"societe\": \"ACME SARL UPDATED\",\n  \"adresse\": \"Rue 456\",\n  \"contact\": \"Jean Dupont\",\n  \"email\": \"contact@acme.com\",\n  \"telephone\": \"0612345678\",\n  \"ville\": \"Rabat\",\n  \"ice\": \"ICE123456\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/v1/fournisseurs/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["api", "v1", "fournisseurs", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete fournisseur",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8081/api/v1/fournisseurs/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["api", "v1", "fournisseurs", "1"]
+        }
+      }
+    }
+  ]
+}
+
+
