@@ -10,7 +10,7 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "http://localhost:8081/api/v1/fournisseurs?sort=societe",
+          "raw": "http://localhost:8081/tricol-suppliers/api/v1/fournisseurs?sort=societe",
           "protocol": "http",
           "host": ["localhost"],
           "port": "8081",
@@ -24,7 +24,7 @@
       "request": {
         "method": "GET",
         "url": {
-          "raw": "http://localhost:8081/api/v1/fournisseurs/1",
+          "raw": "http://localhost:8081/tricol-suppliers/api/v1/fournisseurs/1",
           "protocol": "http",
           "host": ["localhost"],
           "port": "8081",
@@ -42,7 +42,7 @@
           "raw": "{\n  \"societe\": \"ACME SARL\",\n  \"adresse\": \"Rue 123\",\n  \"contact\": \"Jean Dupont\",\n  \"email\": \"contact@acme.com\",\n  \"telephone\": \"0612345678\",\n  \"ville\": \"Casablanca\",\n  \"ice\": \"ICE123456\"\n}"
         },
         "url": {
-          "raw": "http://localhost:8081/api/v1/fournisseurs",
+          "raw": "http://localhost:8081/tricol-suppliers/api/v1/fournisseurs",
           "protocol": "http",
           "host": ["localhost"],
           "port": "8081",
@@ -60,7 +60,7 @@
           "raw": "{\n  \"societe\": \"ACME SARL UPDATED\",\n  \"adresse\": \"Rue 456\",\n  \"contact\": \"Jean Dupont\",\n  \"email\": \"contact@acme.com\",\n  \"telephone\": \"0612345678\",\n  \"ville\": \"Rabat\",\n  \"ice\": \"ICE123456\"\n}"
         },
         "url": {
-          "raw": "http://localhost:8081/api/v1/fournisseurs/1",
+          "raw": "http://localhost:8081/tricol-suppliers/api/v1/fournisseurs/1",
           "protocol": "http",
           "host": ["localhost"],
           "port": "8081",
@@ -73,7 +73,7 @@
       "request": {
         "method": "DELETE",
         "url": {
-          "raw": "http://localhost:8081/api/v1/fournisseurs/1",
+          "raw": "http://localhost:8081/tricol-suppliers/api/v1/fournisseurs/1",
           "protocol": "http",
           "host": ["localhost"],
           "port": "8081",

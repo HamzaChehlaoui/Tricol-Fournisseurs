@@ -6,6 +6,7 @@ import org.springframework.data.domain.Sort;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 /**
  * Service implementation for managing suppliers (fournisseurs).
@@ -56,8 +57,10 @@ public class FournisseurService implements FournisseurServiceInterface {
     }
 
     public List<Fournisseur> findByEmailDomain(String domain) {
-        return fournisseurRepository.findByEmailEndingWithIgnoreCase(domain);
+        return fournisseurRepository.findByEmail(domain);
     }
+
+
 }
 
 

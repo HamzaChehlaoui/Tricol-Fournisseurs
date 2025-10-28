@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface FournisseurRepository extends JpaRepository<Fournisseur, Long> {
     List<Fournisseur> findBySocieteContainingIgnoreCaseOrderBySocieteAsc(String societe);
-    List<Fournisseur> findByEmailEndingWithIgnoreCase(String domain);
+    List<Fournisseur> findByEmail(String domain);
     boolean existsByIce(String ice);
 }
 
