@@ -35,6 +35,7 @@ public class FournisseurController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
+
     @GetMapping("email/{email}")
     public List<Fournisseur> getEmail(@PathVariable("email") String email){
         return fournisseurService.findByEmailDomain(email);
@@ -42,9 +43,12 @@ public class FournisseurController {
 
     @PostMapping
     public ResponseEntity<Fournisseur> create(@Valid @RequestBody Fournisseur fournisseur) {
+
         Fournisseur created = fournisseurService.create(fournisseur);
         return ResponseEntity.created(URI.create("/api/v1/fournisseurs/" + created.getId())).body(created);
     }
+
+
 
     @PutMapping("/{id}")
     public ResponseEntity<Fournisseur> update(@PathVariable("id") Long id, @Valid @RequestBody Fournisseur fournisseur) {
@@ -53,12 +57,15 @@ public class FournisseurController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable("id") Long id) {
+    public String delete(@PathVariable("id") Long id) {
         fournisseurService.delete(id);
-        return ResponseEntity.noContent().build();
+        String message = "fournisseure suprimer";
+
+        return message ;
     }
+
+
 }
 
 
